@@ -34,9 +34,9 @@ def kruskal_align(U, V, permute_U=False, permute_V=False):
     """
 
     # Compute similarity matrices.
-    unrm = [f / np.linalg.norm(f, axis=0) if not (np.isnan(
+    unrm = [(f / np.linalg.norm(f, axis=0)) if not (np.isnan(
         np.linalg.norm(f, axis=0))).any() else 0 for f in U.factors]
-    vnrm = [f / np.linalg.norm(f, axis=0) if not (np.isnan(
+    vnrm = [(f / np.linalg.norm(f, axis=0)) if not (np.isnan(
         np.linalg.norm(f, axis=0))).any() else 0 for f in V.factors]
     sim_matrices = [np.dot(u.T, v) for u, v in zip(unrm, vnrm)]
     cost = 1 - np.mean(np.abs(sim_matrices), axis=0)
