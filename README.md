@@ -19,7 +19,7 @@ Installation
 From the command line run:
 
 ```
-pip install git+https://github.com/ahwillia/tensortools
+pip install git+https://github.com/ComeWllt/tensortools
 ```
 
 (You will need to have `git` installed for this command to work.)
